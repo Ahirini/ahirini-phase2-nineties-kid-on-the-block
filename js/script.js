@@ -3,7 +3,7 @@ function gifFun(){
     search=search.replace('','+');
     $('#anim-text').val('');
     $('#gif-container').html('');
-
+//  $('#gif-container').focus();
     $.get( "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=1", function( data ) {
 //    console.log(data);
     for(var x = 0; x < data.data.length; x++){
@@ -35,7 +35,7 @@ function madLib(nameNoun, adj, songName, noun, year, animName) {
     story += ' are insanely ';
     story += adj + '.';
     story += ' As a reward for taking this quiz, here is a ';
-    story += animName + ' for you! Check it out!';
+    story += animName + ' for you! Check it out below!';
 //  console.log(story);
     $('#story').append(story);
     $('#name-text').val("");
@@ -46,7 +46,7 @@ function madLib(nameNoun, adj, songName, noun, year, animName) {
 }
 
 $( document ).ready(function() {
-     $(this).scrollTop(0);
+    $(this).scrollTop(0);
 //    console.log( "ready!" );
     $('#gif-submit-btn').click(function() {
         madLib();
