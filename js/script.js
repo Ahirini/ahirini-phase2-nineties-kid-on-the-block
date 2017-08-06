@@ -1,55 +1,57 @@
-/*jslint browser: true*/
-/*global $, jQuery*/
-/*jslint devel: true */
+function gifFun(){
+    var search = $('#anim-text').val();
+    search=search.replace('','+');
+    $('#anim-text').val('');
+    $('#gif-container').html('');
 
-function mySubmit() {
-    var score = 0;
-    for (var i = 0; i++; i=5 ) {
-        score = $('.check').val();
-    };
-   $('#score').append('You got ' + score + ' questions right!!!');
+    $.get( "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=dc6zaTOxFJmzC&limit=1", function( data ) {
+//    console.log(data);
+    for(var x = 0; x < data.data.length; x++){
+      var img = $('<img>');
+      img.attr('src', data.data[x].images.original.url);
+      $('#gif-container').append(img);
+    }
+    });
+}
+ 
+function madLib(nameNoun, adj, songName, noun, year, animName) {
+    var nameNoun = $('#name-text').val();
+    var adj = $('#adj-text').val();
+    var songName = $('#song-text').val();
+    var noun = $('#noun-text').val();
+    var year = $('#year-num').val();
+    var animName =$('#anim-text').val();
+    var story = '';
+    story += 'Yo ';
+    story += nameNoun;
+    story += ' - you seem like a ';
+    story += adj;
+    story += ' person, since you like ';
+    story += songName + '.';
+    story += ' Basically, all the ';
+    story += noun;
+    story += ' born in ';
+    story += year;
+    story += ' are insanely ';
+    story += adj + '.';
+    story += ' As a reward for taking this quiz, here is a ';
+    story += animName + ' for you! Check it out!';
+//  console.log(story);
+    $('#story').append(story);
+    $('#name-text').val("");
+    $('#adj-text').val("");
+    $('#song-text').val("");
+    $('#noun-text').val("");
+    $('#year-num').val("");
 }
 
-$(document).ready(function(){
-    $('#submit').on('click', function(){
-        mySubmit();
-        $('#score').val('');
-    })
+$( document ).ready(function() {
+     $(this).scrollTop(0);
+//    console.log( "ready!" );
+    $('#gif-submit-btn').click(function() {
+        madLib();
+        gifFun();
+    });
 });
-     
-//each(function (i, e){sum+=$(e).val();});
-//$("#totalScore").val(sum);
-   
 
 
-//$(document).ready(function () {
-////    console.log("ready!");
-////    $('#score').hide();
-//
-//    function mySubmit() {
-//        var numCorrect = 0;
-//        // If no user selection, progress is stopped
-//        if (('input[type=radio]:checked') === false) {
-//            alert('Please make a selection!');
-//
-//        }
-//        var result = $('radio').val();
-//        if (result === "right") {
-//            numCorrect = numCorrect + 1;
-//        } else {
-//            numCorrect = numCorrect + 0;
-//        }
-//        $('#score').append('You got ' + numCorrect + ' questions right!!!');
-//        return score;
-//    }
-//    
-//    $('#submit').on('click', function () {
-//        mySubmit();
-//    });
-//        
-//    //    return false;
-//
-//
-//
-//});
-//   

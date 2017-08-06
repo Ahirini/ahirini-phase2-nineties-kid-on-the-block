@@ -33,7 +33,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="index.html">Home</a></li>
             <li><a href="comeback.html">Round Two</a></li>
-            <li class="active"><a href="#">Grade Yourself<span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">Fun Quiz<span class="sr-only">(current)</span></a></li>
             <li><a href="about.html">About this website</a></li>
           </ul>
             
@@ -41,74 +41,23 @@
       </div><!-- /.container-fluid -->
     </nav>
     
-    <div class="container-fluid">
+    <div class="container-fluid quiz-form">
         <div class="jumbotron main-heading-page">
-            <h1 class="page-header">Think you're an expert on the 90's?</h1>
-            <h3 class="small-heading-page">Let's find out!</h3>
+            <h1 class="page-header">Information Overload?</h1>
+            <h3 class="small-heading-page">Let's have some fun!</h3>
         </div>
-            <h1 class=" title text-heading-med">Surprise Pop-Quiz Time!</h1>
+            <h1 class="title text-heading-med">It's gonna blow your mind!</h1>
+                <p class="answer">Enter your name.<br><input type ="text" id="name-text"></p>
+                <p class="answer">Enter an adjective.<br><input type ="text" id="adj-text"></p>
+                <p class="answer">Enter a plural noun.<br><input type ="text" id="noun-text"></p>
+                <p class="answer">Who's your favorit 90's celebrity?<br><input type ="text" id="song-text"></p>
+                <p class="answer">Choose a year between 1985 to 1995.<br><input type ="text" id="year-num"></p>
+                <p class="answer">What's your favorite animal?<br><input type ="text" id="anim-text"></p>
+                <button class="btn-quiz quiz-form" id="gif-submit-btn">Show me whatchu got!</button>
+                <p class="answer" id="story"></p>
+                <div class="gif-box-style" id="gif-container"></div>
 			
-   	        <form name="quiz-form" id="quiz-form">
-<!--   	        <div id='quiz'></div>-->
-   	        <div>
-                  <h3 class="title text-heading-sml">Which of these was NOT a Spice Girl!?</h3>
-   	            <img src="images/quiz-spice.jpg" class="img-quiz img-responsive center-block">
-   	            <p class="reg-text answer">
-   	                <input type="radio" name="spice" class="check" value="0"> Baby
-   	                <input type="radio" name="spice" class="check" value="0"> Posh
-   	                <input type="radio" name="spice" class="check" value="0"> Scary
-   	                <input type="radio" name="spice" class="check" value="1"> Cinnamon
-   	            </p>
-   	        </div>
-   	        <div>
-                <h3 class="title text-heading-sml">What was the last name of the Full House Family?</h3>
-   	            <img src="images/quiz-full.jpg" class="img-quiz img-responsive center-block">
-   	            <p class="reg-text answer">
-   	                <input type="radio" name="full" class="check" value="0"> Geller
-   	                <input type="radio" name="full" class="check" value="0"> Saget
-   	                <input type="radio" name="full" class="check" value="1"> Tanner
-   	            </p>
-   	        </div>
-   	        <div>
-                <h3 class="title text-heading-sml">What means no worries for the rest of your days?</h3>
-   	            <img src="images/quiz-hakuna.jpg" class="img-quiz img-responsive center-block">
-   	            <p class="reg-text answer">
-   	                <input type="radio" name="lion" class="check" value="1"> Hakuna Matata
-   	                <input type="radio" name="lion" class="check" value="0"> Hakanu Mutata
-                </p>
-   	        </div>
-   	        <div>
-                <h3 class="title text-heading-sml">Good ol' Joey Fatone was a member of which boyband??</h3>
-   	            <img src="images/quiz-boy.jpg" class="img-quiz img-responsive center-block">
-   	             <p class="reg-text answer">
-   	                <input type="radio" name="boy" class="check" value="1"> N'Sync
-   	                <input type="radio" name="boy" class="check" value="0"> Backstreet Boys
-                </p>
-   	        </div>
-   	        <div>
-                  <h3 class="title text-heading-sml">Where is this freshest of princes originally from?</h3>
-   	            <img src="images/quiz-fresh.jpg" class="img-quiz img-responsive center-block">
-   	            <p class="reg-text answer">
-   	                <input type="radio" name="fresh" class="check" value="0"> West Philapdelphia 
-   	                <input type="radio" name="fresh" class="check" value="1"> Bel-Air
-   	                <input type="radio" name="fresh" class="check" value="0"> Hollywood
-                </p>
-   	        </div>
-   	        <div>
-                <h3 class="title text-heading-sml">What color Bandanna is RAPHAEL wearing?</h3>
-   	            <img src="images/quiz-ninja.jpg" class="img-quiz img-responsive center-block">
-   	            <p class="reg-text answer">
-   	                <input type="radio" name="ninja" class="check" value="0"> Green
-   	                <input type="radio" name="ninja" class="check" value="0"> Blue
-   	                <input type="radio" name="ninja" class="check" value="1"> Red
-   	                <input type="radio" name="ninja" class="check" value="0"> Orange
-   	            </p>
-   	        </div>
-   	        <p id="score"></p>
-   	        
-   	        <button type="button" class="btn-quiz" id="submit">Submit</button>
-   	        <button type="button" class="btn-quiz" id="start">Start Over</button>
-        </form>
+   	    
     </div>
 
 
